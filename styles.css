@@ -1189,3 +1189,127 @@ ul { list-style: none; }
   .partner-logo { min-height: 120px; padding: 22px; }
   .partner-logo img { max-height: 75px; }
 }
+
+/* ---------- Judges ---------- */
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+.judge-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.judge-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+.judge-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 18px rgba(10, 36, 99, 0.25);
+  letter-spacing: 0.5px;
+}
+.judge-name {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+.judge-title {
+  font-size: 0.88rem;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.judge-org {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  min-height: 36px;
+  line-height: 1.4;
+}
+.judge-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  width: 100%;
+}
+.judge-track {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.judge-track.track-a {
+  background: rgba(10, 36, 99, 0.08);
+  color: var(--primary);
+}
+.judge-track.track-b {
+  background: rgba(255, 182, 39, 0.18);
+  color: #8B5A00;
+}
+@media (max-width: 480px) {
+  .judges-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Sponsors ---------- */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.sponsor-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+.sponsor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.sponsor-card img {
+  max-height: 140px;
+  width: auto;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+.sponsor-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+}
