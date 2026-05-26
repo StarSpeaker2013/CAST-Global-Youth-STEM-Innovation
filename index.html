@@ -27,6 +27,9 @@
       <a href="#schedule">Schedule</a>
       <a href="#awards">Awards</a>
       <a href="#fee">Fee</a>
+      <a href="#community" data-ptab="panelJudges">Judges</a>
+      <a href="#community" data-ptab="panelPartners">Partners</a>
+      <a href="#community" data-ptab="panelSponsors">Sponsors</a>
       <a href="#apply" class="nav-cta">Apply Now</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -560,15 +563,22 @@
   </div>
 </section>
 
-<!-- ========== JUDGES ========== -->
-<section class="section" id="judges">
+<!-- ========== JUDGES / PARTNERS / SPONSORS (TABBED) ========== -->
+<section class="section" id="community">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Meet the Panel</span>
-      <h2>Our <span class="accent">Judges</span></h2>
-      <p class="section-sub">A distinguished panel of professors, executives, and industry experts evaluating our young innovators.</p>
+      <span class="eyebrow">Meet the Community</span>
+      <h2>Our <span class="accent">Judges, Partners &amp; Sponsors</span></h2>
+      <p class="section-sub">The experts, organizations, and supporters powering this summit.</p>
     </div>
 
+    <div class="track-tabs people-tabs reveal">
+      <button class="pt-btn active" data-ptab="panelJudges">👩‍⚖️ Our Judges</button>
+      <button class="pt-btn" data-ptab="panelPartners">🤝 Our Partners</button>
+      <button class="pt-btn" data-ptab="panelSponsors">💼 Sponsors</button>
+    </div>
+
+    <div class="people-panel active" id="panelJudges">
     <div class="judges-grid reveal">
       <div class="judge-card">
         <div class="judge-avatar">CL</div>
@@ -728,43 +738,30 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+    </div>
 
-<!-- ========== SUPPORTED BY / PARTNERS ========== -->
-<section class="section section-alt" id="partners">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Supported By</span>
-      <h2>Our <span class="accent">Partners</span></h2>
-      <p class="section-sub">Proudly supported by leading organizations championing youth innovation.</p>
-    </div>
-    <div class="partners-grid reveal">
-      <div class="partner-logo">
-        <img src="1.jpeg" alt="Partner Organization 1" />
-      </div>
-      <div class="partner-logo">
-        <img src="2.jpeg" alt="Partner Organization 2" />
-      </div>
-      <div class="partner-logo">
-        <img src="3.jpeg" alt="Partner Organization 3" />
+    <div class="people-panel" id="panelPartners">
+      <p class="section-sub" style="text-align:center;margin-bottom:1.5rem;">Proudly supported by leading organizations championing youth innovation.</p>
+      <div class="partners-grid reveal">
+        <div class="partner-logo">
+          <img src="1.jpeg" alt="Partner Organization 1" />
+        </div>
+        <div class="partner-logo">
+          <img src="2.jpeg" alt="Partner Organization 2" />
+        </div>
+        <div class="partner-logo">
+          <img src="3.jpeg" alt="Partner Organization 3" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ========== SPONSORS ========== -->
-<section class="section" id="sponsors">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Sponsors</span>
-      <h2>Our <span class="accent">Sponsors</span></h2>
-      <p class="section-sub">Made possible thanks to the generous support of our sponsors.</p>
-    </div>
-    <div class="sponsors-grid reveal">
-      <div class="sponsor-card">
-        <img src="mentorX.jpg" alt="MentorX" />
-        <div class="sponsor-name">MentorX</div>
+    <div class="people-panel" id="panelSponsors">
+      <p class="section-sub" style="text-align:center;margin-bottom:1.5rem;">Made possible thanks to the generous support of our sponsors.</p>
+      <div class="sponsors-grid reveal">
+        <div class="sponsor-card">
+          <img src="mentorX.jpg" alt="MentorX" />
+          <div class="sponsor-name">MentorX</div>
+        </div>
       </div>
     </div>
   </div>

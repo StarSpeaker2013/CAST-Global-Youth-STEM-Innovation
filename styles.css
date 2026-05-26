@@ -550,6 +550,30 @@ ul { list-style: none; }
 
 .track-panel { display: none; }
 .track-panel.active { display: block; animation: fadeIn 0.5s ease; }
+
+/* People Tabs (Judges / Sponsors) */
+.people-tabs { margin-bottom: 2rem; }
+.pt-btn {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 0 0.4rem 0.6rem;
+}
+.pt-btn:hover { border-color: #6366f1; color: #6366f1; }
+.pt-btn.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.35);
+}
+.people-panel { display: none; }
+.people-panel.active { display: block; animation: fadeIn 0.5s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 .track-grid {

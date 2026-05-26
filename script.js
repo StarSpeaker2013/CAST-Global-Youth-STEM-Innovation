@@ -46,6 +46,26 @@
     });
   });
 
+  /* ---------- People Tabs (Judges/Sponsors) ---------- */
+  const ptBtns = document.querySelectorAll('.pt-btn');
+  const ptPanels = document.querySelectorAll('.people-panel');
+  ptBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.ptab;
+      ptBtns.forEach(b => b.classList.remove('active'));
+      ptPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById(target);
+      if (panel) {
+        panel.classList.add('active');
+        panel.querySelectorAll('.reveal').forEach(el => {
+          el.classList.remove('visible');
+          requestAnimationFrame(() => el.classList.add('visible'));
+        });
+      }
+    });
+  });
+
   /* ---------- Reveal on Scroll (IntersectionObserver) ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -71,6 +91,14 @@
       const target = document.querySelector(targetId);
       if (!target) return;
       e.preventDefault();
+
+      // If the link is targeting a people-panel tab, activate it first
+      const ptab = link.dataset.ptab;
+      if (ptab) {
+        const btn = document.querySelector(`.pt-btn[data-ptab="${ptab}"]`);
+        if (btn) btn.click();
+      }
+
       const offset = 70;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
