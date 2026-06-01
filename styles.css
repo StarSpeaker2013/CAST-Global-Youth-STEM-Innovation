@@ -1337,3 +1337,102 @@ ul { list-style: none; }
   font-size: 1.05rem;
   letter-spacing: 0.3px;
 }
+
+/* ========== AGENDA SECTION ========== */
+.section-agenda {
+  background: linear-gradient(180deg, #fafbff 0%, #f0f4ff 100%);
+}
+.agenda-list {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.agenda-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 2px 12px rgba(30, 41, 90, 0.06);
+  border-left: 4px solid #c7d2fe;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.agenda-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 41, 90, 0.10);
+}
+.agenda-row.highlight {
+  border-left-color: #6366f1;
+  background: linear-gradient(90deg, #eef2ff 0%, #ffffff 60%);
+}
+.agenda-row.keynote {
+  border-left-color: #f59e0b;
+  background: linear-gradient(90deg, #fef3c7 0%, #ffffff 60%);
+}
+.agenda-time {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #4f46e5;
+  padding-top: 0.2rem;
+  border-right: 2px dashed #e0e7ff;
+  padding-right: 1rem;
+  align-self: start;
+}
+.agenda-row.keynote .agenda-time {
+  color: #d97706;
+  border-right-color: #fde68a;
+}
+.agenda-body h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+.agenda-body p {
+  margin: 0 0 0.35rem;
+  color: #475569;
+  line-height: 1.55;
+}
+.agenda-bullets {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+  color: #475569;
+}
+.agenda-bullets li {
+  margin: 0.2rem 0;
+  line-height: 1.5;
+}
+.agenda-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.45rem;
+}
+.track-a-tag { background: #dbeafe; color: #1d4ed8; }
+.track-b-tag { background: #dcfce7; color: #15803d; }
+.keynote-tag { background: #fef3c7; color: #b45309; }
+
+@media (max-width: 640px) {
+  .agenda-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem 1.1rem;
+  }
+  .agenda-time {
+    border-right: none;
+    border-bottom: 2px dashed #e0e7ff;
+    padding: 0 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  .agenda-row.keynote .agenda-time {
+    border-bottom-color: #fde68a;
+  }
+}
