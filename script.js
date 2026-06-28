@@ -46,23 +46,28 @@
     });
   });
 
-  /* ---------- People Tabs (Judges/Sponsors) ---------- */
-  const ptBtns = document.querySelectorAll('.pt-btn');
-  const ptPanels = document.querySelectorAll('.people-panel');
-  ptBtns.forEach(btn => {
+  /* ---------- People Tabs (Judges/Sponsors/Results) — nesting-safe ---------- */
+  document.querySelectorAll('.pt-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.ptab;
-      ptBtns.forEach(b => b.classList.remove('active'));
-      ptPanels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
       const panel = document.getElementById(target);
-      if (panel) {
-        panel.classList.add('active');
-        panel.querySelectorAll('.reveal').forEach(el => {
-          el.classList.remove('visible');
-          requestAnimationFrame(() => el.classList.add('visible'));
-        });
-      }
+      if (!panel) return;
+
+      // Activate only the buttons within the same tab bar
+      const bar = btn.closest('.people-tabs');
+      if (bar) bar.querySelectorAll('.pt-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Toggle only sibling panels (those sharing the target panel's parent),
+      // so nested tab groups don't interfere with each other.
+      const parent = panel.parentElement;
+      parent.querySelectorAll(':scope > .people-panel').forEach(p => p.classList.remove('active'));
+      panel.classList.add('active');
+
+      panel.querySelectorAll('.reveal').forEach(el => {
+        el.classList.remove('visible');
+        requestAnimationFrame(() => el.classList.add('visible'));
+      });
     });
   });
 
