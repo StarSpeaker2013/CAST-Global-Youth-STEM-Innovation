@@ -1436,3 +1436,71 @@ ul { list-style: none; }
     border-bottom-color: #fde68a;
   }
 }
+
+/* ---------- WEST REGIONAL RESULTS ---------- */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.result-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 22px 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.result-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+}
+.result-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.result-id {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-width: 52px;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  border-radius: 999px;
+}
+.result-title {
+  font-size: 1.02rem;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 14px;
+  flex: 1;
+}
+.result-leader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+.result-leader span { font-size: 0.95rem; }
+
+@media (max-width: 900px) {
+  .results-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .results-grid { grid-template-columns: 1fr; }
+}
