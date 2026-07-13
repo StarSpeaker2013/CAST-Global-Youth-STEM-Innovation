@@ -71,6 +71,20 @@
     });
   });
 
+  /* ---------- Floating Results Notification ---------- */
+  // Shows on every visit/reload; dismissal only hides it for the current view.
+  const floatNotice = document.getElementById('floatNotice');
+  if (floatNotice) {
+    const dismiss = () => {
+      floatNotice.classList.add('hide');
+      setTimeout(() => floatNotice.remove(), 400);
+    };
+    const closeBtn = document.getElementById('floatNoticeClose');
+    if (closeBtn) closeBtn.addEventListener('click', dismiss);
+    const link = floatNotice.querySelector('.float-notice-link');
+    if (link) link.addEventListener('click', () => setTimeout(dismiss, 500));
+  }
+
   /* ---------- Reveal on Scroll (IntersectionObserver) ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

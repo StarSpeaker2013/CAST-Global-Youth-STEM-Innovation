@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -28,6 +28,7 @@
       <a href="#agenda">Agenda</a>
       <a href="#awards">Awards</a>
       <a href="#results">Results</a>
+      <a href="#winners">Winners</a>
       <a href="#fee">Fee</a>
       <a href="#community" data-ptab="panelJudges">Judges</a>
       <a href="#community" data-ptab="panelPartners">Partners</a>
@@ -39,6 +40,16 @@
     </button>
   </div>
 </header>
+
+<!-- ========== FLOATING RESULTS NOTIFICATION ========== -->
+<div class="float-notice" id="floatNotice" role="status">
+  <a href="#winners" class="float-notice-link">
+    <span class="float-notice-icon">🏆</span>
+    <span class="float-notice-text"><strong>2026 West Regional Winners are here!</strong> Tap to view the results.</span>
+    <span class="float-notice-arrow">→</span>
+  </a>
+  <button class="float-notice-close" id="floatNoticeClose" aria-label="Dismiss notification">&times;</button>
+</div>
 
 <!-- ========== HERO ========== -->
 <section class="hero" id="hero">
@@ -891,12 +902,12 @@
 </section>
 
 <!-- ========== WEST REGIONAL RESULTS (TABBED) ========== -->
-<section class="section section-alt" id="results">
+<section class="section section-awards" id="results">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">West Regional · Selected Projects</span>
-      <h2>West Regional <span class="accent">Results</span></h2>
-      <p class="section-sub">Congratulations to the teams selected through the West Regional review. Listed by application ID — in no particular order.</p>
+      <span class="eyebrow light">West Regional · Selected Projects</span>
+      <h2 class="light">West Regional <span class="accent-gold">Results</span></h2>
+      <p class="section-sub light">Congratulations to the teams selected through the West Regional review. Listed by application ID — in no particular order.</p>
     </div>
 
     <!-- TOP-LEVEL GROUP TABS -->
@@ -1145,6 +1156,226 @@
   </div>
 </section>
 
+<!-- ========== WINNERS ========== -->
+<section class="section section-alt" id="winners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Congratulations</span>
+      <h2>West Regional <span class="accent">Winners</span></h2>
+      <p class="section-sub">Celebrating the outstanding teams recognized at the 2026 West Regional Competition.</p>
+    </div>
+
+    <!-- FIRST PLACE -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥇</span>
+        <h3>First Place</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card gold">
+          <h4 class="winner-title">When Music Heals: Concordia, the AI Musical Therapy Application</h4>
+          <div class="winner-leader"><span>👤</span> Kyler Ji</div>
+        </div>
+        <div class="winner-card gold">
+          <h4 class="winner-title">SafeSpec</h4>
+          <div class="winner-leader"><span>👤</span> Brighton Liang</div>
+        </div>
+        <div class="winner-card gold">
+          <h4 class="winner-title">SmartArmor: A Low-Cost Wearable AI System for Personalized Forearm Fatigue Monitoring and Overuse-Risk Awareness in Youth Tennis Players</h4>
+          <div class="winner-leader"><span>👤</span> Ryan Wang</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECOND PLACE -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥈</span>
+        <h3>Second Place</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card silver">
+          <h4 class="winner-title">SR-EyeScan</h4>
+          <div class="winner-leader"><span>👤</span> Jindong Sha</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">Sage — An Intent-Driven AI Control System for Indoor Farming</h4>
+          <div class="winner-leader"><span>👤</span> Alan Liu</div>
+          <div class="winner-members"><span>👥</span> Brendan Chew, Charlotte Minji Cho</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">Traffic Counter</h4>
+          <div class="winner-leader"><span>👤</span> Raina Ji</div>
+          <div class="winner-members"><span>👥</span> Andy Wang</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">From Sap to Sip: Utah's Tree Drink Innovation</h4>
+          <div class="winner-leader"><span>👤</span> Catherine Sun</div>
+          <div class="winner-members"><span>👥</span> Hannah Sun</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">BEYOND ENTERTAINMENT: Evaluating AI's Effectiveness in Recomposing Music for Simulated ADHD Cognitive Profiles</h4>
+          <div class="winner-leader"><span>👤</span> Audrey Zhou</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THIRD PLACE -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥉</span>
+        <h3>Third Place</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Graffiti Detection With AI</h4>
+          <div class="winner-leader"><span>👤</span> Brendan Chew</div>
+          <div class="winner-members"><span>👥</span> Alan Liu, Stanley Qiu, Austin Ye</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">AI-Powered Computer Vision for Real-Time Quality Monitoring in Safety-Critical Assembly</h4>
+          <div class="winner-leader"><span>👤</span> Everett Song</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Intelligent Physical Environmental Protection: A LiDAR-Based Autonomous Rat Patrol and Real-Time Notification System</h4>
+          <div class="winner-leader"><span>👤</span> Chiu Jie-Ling</div>
+          <div class="winner-members"><span>👥</span> Chou Jun-Yi, Chou Jr-Yu, Shengli, Chiu Man-Ling</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">FinVest</h4>
+          <div class="winner-leader"><span>👤</span> Jaycen Niu</div>
+          <div class="winner-members"><span>👥</span> Dylan Liu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Scholara: The AI-Powered College Counseling Platform</h4>
+          <div class="winner-leader"><span>👤</span> Lisa Li</div>
+          <div class="winner-members"><span>👥</span> Advika Gehlot, Sophia Harris</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">An AI-Powered NFC Voice Assistant for Everyday Objects</h4>
+          <div class="winner-leader"><span>👤</span> Bella Huang</div>
+          <div class="winner-members"><span>👥</span> Cayla Hung, Abbey Lin, Anderson Lu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">An Agentic AI Framework for UAV Safety Testing Automation</h4>
+          <div class="winner-leader"><span>👤</span> Meilin Zhu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">StayCool</h4>
+          <div class="winner-leader"><span>👤</span> Bill Yu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">A Study on the Relationship Between Respiratory Chest Expansion and Multi-Axis Body Motion Using a Wearable Belt Sensor</h4>
+          <div class="winner-leader"><span>👤</span> Yaoshan Jiang</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">XShield Derm</h4>
+          <div class="winner-leader"><span>👤</span> Hongyang Kuang</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">ProActive Fall</h4>
+          <div class="winner-leader"><span>👤</span> Melanie Mar</div>
+          <div class="winner-members"><span>👥</span> Shiloh Shin, Eliana Shin</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Adaptive Wrist Exoskeleton for TFCC Rehabilitation</h4>
+          <div class="winner-leader"><span>👤</span> Victoria Wang</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">MicroTwin: SoilTwin Edition</h4>
+          <div class="winner-leader"><span>👤</span> Ruoxi Zhao</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POSTER WINNERS ========== -->
+<section class="section section-awards" id="poster-winners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow light">Poster Session</span>
+      <h2 class="light">West Regional <span class="accent-gold">Poster Winners</span></h2>
+      <p class="section-sub light">Honoring the standout poster projects from the 2026 West Regional Competition.</p>
+    </div>
+
+    <!-- GOLD -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥇</span>
+        <h3>Gold</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card gold">
+          <h4 class="winner-title">Revive Sport AI</h4>
+          <div class="winner-leader"><span>👤</span> Ean Luo</div>
+          <div class="winner-members"><span>👥</span> Audrey Shi, Skyler Tan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SILVER -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥈</span>
+        <h3>Silver</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card silver">
+          <h4 class="winner-title">RiseUp Service</h4>
+          <div class="winner-leader"><span>👤</span> Edwin Jiao</div>
+          <div class="winner-members"><span>👥</span> Raina Ji, Yiru Wang</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">QuestForge</h4>
+          <div class="winner-leader"><span>👤</span> Kaiwen Zhou</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">AI Lifeguarding Proposal</h4>
+          <div class="winner-leader"><span>👤</span> Anthony C Zhou</div>
+          <div class="winner-members"><span>👥</span> Charlotte Minji Cho, Derek Hu, Kathy Chen, Eric Chang</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">How Housing Market Competitiveness Influences Real Estate Listing Language: A Natural Language Processing Analysis</h4>
+          <div class="winner-leader"><span>👤</span> Victoria Wang</div>
+          <div class="winner-members"><span>👥</span> Abby Yan</div>
+        </div>
+        <div class="winner-card silver">
+          <h4 class="winner-title">GlowLab: An AI-Powered System for Personalized Skincare Analysis and Tracking</h4>
+          <div class="winner-leader"><span>👤</span> Laura Zimny</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRONZE -->
+    <div class="winner-tier reveal">
+      <div class="winner-tier-head">
+        <span class="winner-medal">🥉</span>
+        <h3>Bronze</h3>
+      </div>
+      <div class="winner-grid">
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Threads</h4>
+          <div class="winner-leader"><span>👤</span> Grace Liu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">SELF-SUSTAINABLE SOLAR DATA CENTER &amp; AGRI-TECH CO-GENERATION CLUSTER</h4>
+          <div class="winner-leader"><span>👤</span> Rachael Li</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">FLAMMAI</h4>
+          <div class="winner-leader"><span>👤</span> Zhiyuan Wang</div>
+          <div class="winner-members"><span>👥</span> Shawn Zhu, Preston Talgat, Stanley Zhu</div>
+        </div>
+        <div class="winner-card bronze">
+          <h4 class="winner-title">Lagged County-Level Associations Between Agricultural Pesticide Application and Parkinson's Disease Mortality in the United States</h4>
+          <div class="winner-leader"><span>👤</span> Siyuan Chen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== APPLY CTA ========== -->
 <section class="section apply-section" id="apply">
   <div class="container apply-container">
@@ -1218,6 +1449,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
