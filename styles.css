@@ -1073,9 +1073,61 @@ ul { list-style: none; }
 #winners .winner-card.gold { border-top-color: #F4B400; }
 #winners .winner-card.silver { border-top-color: #9CA3AF; }
 #winners .winner-card.bronze { border-top-color: #CD7F32; }
+#winners .winner-card.recognition { border-top-color: #6366f1; }
 #winners .winner-title { color: var(--primary); }
 #winners .winner-leader { color: var(--text); }
 #winners .winner-members { color: var(--text-light); }
+
+/* Regional competition tabs and East Regional details */
+.regional-tabs { margin-bottom: 2.75rem; }
+.regional-panel-head { text-align: center; margin-bottom: 2.5rem; }
+.regional-panel-head h3 {
+  color: var(--primary);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0.5rem 0;
+}
+.regional-panel-head p { color: var(--text-light); }
+.east-info-grid,
+.east-judge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 3rem;
+}
+.east-info-card,
+.east-judge-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.east-info-card { display: flex; gap: 16px; align-items: flex-start; }
+.east-info-icon { font-size: 1.8rem; line-height: 1; }
+.east-info-card h4,
+.east-judge-card h4 { color: var(--primary); margin-bottom: 8px; }
+.east-info-card p,
+.east-judge-card p { color: var(--text-light); font-size: 0.92rem; }
+.east-info-card strong { color: var(--text); }
+.east-judge-grid { grid-template-columns: repeat(2, 1fr); }
+.east-judge-card h4 { margin-top: 14px; }
+.east-judge-card p + p { margin-top: 12px; }
+.junior-only {
+  display: inline-block;
+  background: rgba(215, 38, 61, 0.08);
+  color: var(--red);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.recognition-tier .winner-grid { max-width: 520px; margin: 0 auto; }
+
+@media (max-width: 800px) {
+  .east-info-grid { grid-template-columns: 1fr; }
+  .east-judge-grid { grid-template-columns: 1fr; }
+}
 
 /* Results sub-tabs on dark theme (#results uses .section-awards) */
 #results .result-sub-tabs { border-bottom-color: rgba(255,255,255,0.2); }

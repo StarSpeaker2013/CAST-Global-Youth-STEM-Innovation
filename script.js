@@ -55,8 +55,12 @@
 
       // Activate only the buttons within the same tab bar
       const bar = btn.closest('.people-tabs');
-      if (bar) bar.querySelectorAll('.pt-btn').forEach(b => b.classList.remove('active'));
+      if (bar) bar.querySelectorAll('.pt-btn').forEach(b => {
+        b.classList.remove('active');
+        if (b.hasAttribute('aria-selected')) b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      if (btn.hasAttribute('aria-selected')) btn.setAttribute('aria-selected', 'true');
 
       // Toggle only sibling panels (those sharing the target panel's parent),
       // so nested tab groups don't interfere with each other.
