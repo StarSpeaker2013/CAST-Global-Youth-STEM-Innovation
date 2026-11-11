@@ -1915,6 +1915,8 @@ ul { list-style: none; }
 .national-result-card.rank-1 { border-top-color: #F4B400; }
 .national-result-card.rank-2 { border-top-color: #9CA3AF; }
 .national-result-card.rank-3 { border-top-color: #CD7F32; }
+.national-result-card.rank-4,
+.national-result-card.rank-5 { border-top-color: var(--primary-light); }
 .result-rank { display: block; margin-bottom: 9px; color: var(--primary); font-weight: 700; }
 .project-id {
   display: inline-block;
