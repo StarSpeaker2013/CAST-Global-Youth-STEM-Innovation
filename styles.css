@@ -1632,6 +1632,15 @@ ul { list-style: none; }
   font-size: 1.05rem;
   letter-spacing: 0.3px;
 }
+.title-sponsor-card { border: 2px solid var(--gold); }
+.sponsor-level {
+  margin-top: 6px;
+  color: #8B5A00;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
 /* ========== AGENDA SECTION ========== */
 .section-agenda {
@@ -1845,4 +1854,118 @@ ul { list-style: none; }
 }
 @media (max-width: 600px) {
   .results-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- 2027 SEASON ---------- */
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.season-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.season-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.season-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.season-status {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  color: var(--primary);
+  background: rgba(255, 182, 39, 0.18);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.season-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.season-card p { color: var(--text-light); font-size: 0.94rem; }
+
+/* ---------- NATIONAL CHAMPIONSHIP RESULTS ---------- */
+.national-result-tabs { margin-bottom: 2.5rem; }
+.national-division { margin-top: 2.5rem; }
+.national-division > h3 {
+  margin-bottom: 1.25rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+  font-size: 1.35rem;
+}
+.national-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.national-result-card {
+  position: relative;
+  padding: 25px 22px 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.national-result-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.national-result-card.rank-1 { border-top-color: #F4B400; }
+.national-result-card.rank-2 { border-top-color: #9CA3AF; }
+.national-result-card.rank-3 { border-top-color: #CD7F32; }
+.result-rank { display: block; margin-bottom: 9px; color: var(--primary); font-weight: 700; }
+.project-id {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 3px 9px;
+  background: var(--bg-alt);
+  border-radius: 999px;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.national-result-card h4 { margin-bottom: 14px; color: var(--text); font-size: 1rem; line-height: 1.45; }
+.national-result-card p { padding-top: 12px; border-top: 1px dashed var(--border); color: var(--text-light); font-size: 0.9rem; }
+.national-title-sponsors { text-align: center; }
+
+/* ---------- PHOTO GALLERY ---------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.gallery-card {
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+.gallery-west { background-image: linear-gradient(135deg, rgba(10,36,99,.48), rgba(6,21,57,.8)), url('activity.png'); }
+.gallery-national { background-image: linear-gradient(135deg, rgba(10,36,99,.48), rgba(6,21,57,.8)), url('3.jpeg'); }
+.gallery-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
+.gallery-overlay {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 30px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(6,21,57,.94));
+}
+.gallery-icon { font-size: 2rem; line-height: 1; }
+.gallery-label { display: block; color: var(--gold-light); font-size: 0.78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.gallery-card h3 { color: #fff; margin: 5px 0 10px; font-size: 1.35rem; }
+.gallery-link { font-weight: 600; font-size: .9rem; }
+
+@media (max-width: 900px) {
+  .season-grid { grid-template-columns: 1fr; }
+  .national-results-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 650px) {
+  .national-results-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-card { min-height: 280px; }
 }
